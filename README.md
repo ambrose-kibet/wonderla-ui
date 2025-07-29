@@ -49,7 +49,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- _Coming soon_
+- [live_demo](https://wonderla-ui.netlify.app/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
