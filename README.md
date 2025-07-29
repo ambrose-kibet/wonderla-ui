@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="./src/assets/logo.svg" alt="Wonderla UI Logo" width="140" height="auto" />
+  <img src="./src/assets/logo.webp" alt="Wonderla UI Logo" width="140" height="auto" />
   <br/>
 </div>
 
