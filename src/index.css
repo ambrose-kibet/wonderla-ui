@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Mulish";
+  src: url("./assets/fonts/Mulish-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-mulish: "Mulish", sans-serif;
+  --font-mulish-bold: "Mulish", sans-serif;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
