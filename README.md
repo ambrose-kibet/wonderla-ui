@@ -7,7 +7,7 @@
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
+- [📗 Table of Contents](#-table-of-contents)
 - [📝 Wonderla UI ](#-wonderla-ui-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
@@ -60,7 +60,7 @@ To get a local copy up and running, follow these steps.
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/wonderla-ui.git
+git clone https://github.com/ambrose-kibet/wonderla-ui.git
 cd wonderla-ui
 ```
 
