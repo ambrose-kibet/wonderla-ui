@@ -37,7 +37,7 @@ const CategorySidebar: React.FC = () => {
           </div>
           <div className="ml-4 flex flex-col items-start translate-x-[20%] -mt-8 cursor-pointer">
             <span className="text-white text-xl font-semibold mb-1">Land</span>
-            <span className="bg-indigo-400 text-white text-sm font-normal  px-3 py-1 rounded-full">
+            <span className="bg-indigo-400 text-white text-sm font-normal  px-3 py-0 rounded-full">
               72 Rides
             </span>
           </div>
@@ -74,7 +74,7 @@ const CategorySidebar: React.FC = () => {
         </div>
         <div className="ml-4 flex flex-col items-start translate-x-[20%] cursor-pointer">
           <span className="text-white text-xl font-semibold mb-1">Water</span>
-          <span className="bg-indigo-400 text-white text-sm font-normal  px-3 py-1 rounded-full">
+          <span className="bg-indigo-400 text-white text-sm font-normal  px-3 py-0 rounded-full">
             55 Rides
           </span>
         </div>
@@ -110,7 +110,7 @@ const CategorySidebar: React.FC = () => {
         </div>
         <div className="ml-4 flex flex-col items-start translate-x-[40%] cursor-pointer">
           <span className="text-white text-xl font-semibold mb-1">Kids</span>
-          <span className="bg-indigo-400 text-white text-sm font-normal  px-3 py-1 rounded-full">
+          <span className="bg-indigo-400 text-white text-sm font-normal  px-3 py-0 rounded-full">
             36 Rides
           </span>
         </div>
