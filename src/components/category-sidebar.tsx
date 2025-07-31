@@ -14,6 +14,28 @@ const CategorySidebar: React.FC = () => {
     water: "rotate(92deg)",
     kids: "rotate(145deg)",
   };
+  const getCurrentRotationAngle = (rotationString: string) => {
+    return parseFloat(
+      rotationString.replace("rotate(", "").replace("deg)", "")
+    );
+  };
+  const changeCategory = (category: keyof typeof categoryPositions) => {
+    setActiveCategory((oldCategory) => {
+      let targetAngle = categoryPositions[category];
+      const isLandToKids =
+        (oldCategory.category === "land" && category === "kids") ||
+        (oldCategory.category === "water" && category === "kids");
+
+      if (isLandToKids) {
+        targetAngle = "translateY(78%) translateX(23%)";
+      }
+
+      return {
+        category,
+        rotation: targetAngle,
+      };
+    });
+  };
 
   return (
     <div className="bg-blue-950 w-[600px] h-[600px] relative -translate-x-[50%] translate-y-10 flex font-mulish items-center justify-center rounded-full overflow-x-visible">
@@ -22,7 +44,7 @@ const CategorySidebar: React.FC = () => {
 
       {/* This is the container that will rotate to move the indicator */}
       <div
-        className="absolute w-full h-full flex items-start justify-center z-20 transition-transform duration-700 ease-in-out"
+        className="absolute w-full h-full flex items-start justify-center  z-20 transition-transform duration-700 ease-in-out"
         style={{
           transform: activeCategory.rotation,
           transformOrigin: "center center",
@@ -37,12 +59,7 @@ const CategorySidebar: React.FC = () => {
 
       <button
         className={`absolute flex items-center z-20  top-0 right-3`}
-        onClick={() =>
-          setActiveCategory({
-            category: "land",
-            rotation: categoryPositions.land,
-          })
-        }
+        onClick={() => changeCategory("land")}
       >
         <div className="relative w-35 h-35 rounded-full flex items-center justify-center bg-transparent ">
           <div
@@ -76,12 +93,7 @@ const CategorySidebar: React.FC = () => {
 
       <button
         className={`absolute flex items-center z-20  top-[40%] right-[-19%] `}
-        onClick={() =>
-          setActiveCategory({
-            category: "water",
-            rotation: categoryPositions.water,
-          })
-        }
+        onClick={() => changeCategory("water")}
       >
         <div className="relative w-35 h-35 rounded-full flex items-center justify-center bg-transparent ">
           <div
@@ -112,12 +124,7 @@ const CategorySidebar: React.FC = () => {
       </button>
       <button
         className={`absolute flex items-center z-20  bottom-5 right-1 `}
-        onClick={() =>
-          setActiveCategory({
-            category: "kids",
-            rotation: categoryPositions.kids,
-          })
-        }
+        onClick={() => changeCategory("kids")}
       >
         <div
           className="relative w-35 h-35 rounded-full flex items-center justify-center
