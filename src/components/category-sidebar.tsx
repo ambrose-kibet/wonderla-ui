@@ -14,11 +14,6 @@ const CategorySidebar: React.FC = () => {
     water: "rotate(92deg)",
     kids: "rotate(145deg)",
   };
-  const getCurrentRotationAngle = (rotationString: string) => {
-    return parseFloat(
-      rotationString.replace("rotate(", "").replace("deg)", "")
-    );
-  };
   const changeCategory = (category: keyof typeof categoryPositions) => {
     setActiveCategory((oldCategory) => {
       let targetAngle = categoryPositions[category];
